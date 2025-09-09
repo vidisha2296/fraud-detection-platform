@@ -1,0 +1,50 @@
+[
+  {
+    "id": "txn_01001",
+    "customerId": "cust_017",
+    "cardId": "card_093",
+    "mcc": "6011",
+    "merchant": "ATM Withdrawal",
+    "amount": -10000,
+    "currency": "INR",
+    "ts": "2025-06-13T13:02:11Z",
+    "deviceId": "dev_45",
+    "geo": {
+      "lat": 28.61,
+      "lon": 77.21,
+      "country": "IN"
+    }
+  },
+  {
+    "id": "txn_01002",
+    "customerId": "cust_001",
+    "cardId": "card_001",
+    "mcc": "5411",
+    "merchant": "Supermarket",
+    "amount": -2500,
+    "currency": "INR", 
+    "ts": "2025-06-14T10:15:22Z",
+    "deviceId": "dev_12",
+    "geo": {
+      "lat": 28.61,
+      "lon": 77.21,
+      "country": "IN"
+    }
+  },
+  {
+    "id": "txn_01003",
+    "customerId": "cust_002",
+    "cardId": "card_002",
+    "mcc": "5812",
+    "merchant": "Restaurant",
+    "amount": -1500,
+    "currency": "INR",
+    "ts": "2025-06-14T19:30:45Z",
+    "deviceId": "dev_23",
+    "geo": {
+      "lat": 28.61,
+      "lon": 77.21,
+      "country": "IN"
+    }
+  }
+]

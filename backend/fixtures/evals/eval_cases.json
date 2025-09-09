@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1,
+    "name": "Card lost",
+    "customerId": "cust_001",
+    "transaction": {
+      "id": "txn_001",
+      "amount": 0,
+      "type": "card_lost"
+    },
+    "expected_action": {
+      "action": "freeze",
+      "reason": "OTP required"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Unauthorized charge single match",
+    "customerId": "cust_002",
+    "transaction": {
+      "id": "txn_002",
+      "amount": 4999,
+      "merchant": "ABC"
+    },
+    "expected_action": {
+      "action": "open_dispute",
+      "reason": "10.4"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Duplicate pending vs captured",
+    "customerId": "cust_003",
+    "transaction": {
+      "id": "txn_003",
+      "amount": 1500,
+      "merchant": "XYZ",
+      "status": ["pending", "captured"]
+    },
+    "expected_action": {
+      "action": "explanation_only",
+      "reason": "duplicate transactions"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Geo-velocity anomaly",
+    "customerId": "cust_004",
+    "transaction": {
+      "id": "txn_004",
+      "amount": 2000,
+      "locations": ["Delhi 10:10", "New York 10:40"]
+    },
+    "expected_action": {
+      "action": "freeze",
+      "reason": "high risk due to geo-velocity"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Device change + MCC anomaly",
+    "customerId": "cust_005",
+    "transaction": {
+      "id": "txn_005",
+      "amount": 3000,
+      "device_change": true,
+      "mcc_anomaly": true
+    },
+    "expected_action": {
+      "action": "contact_customer",
+      "reason": "medium risk"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Past heavy chargebacks",
+    "customerId": "cust_006",
+    "transaction": {
+      "id": "txn_006",
+      "amount": 500,
+      "history_chargebacks": 7
+    },
+    "expected_action": {
+      "action": "escalate_case",
+      "reason": "high past chargebacks"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Risk service timeout",
+    "customerId": "cust_007",
+    "transaction": {
+      "id": "txn_007",
+      "amount": 1200
+    },
+    "expected_action": {
+      "action": "medium_risk_rule_fallback",
+      "reason": "risk_unavailable"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Rate limit retry",
+    "customerId": "cust_008",
+    "transaction": {
+      "id": "txn_008",
+      "amount": 800
+    },
+    "expected_action": {
+      "action": "approved_after_retry",
+      "reason": "rate limit respected"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Policy block unfreeze without identity",
+    "customerId": "cust_009",
+    "transaction": {
+      "id": "txn_009",
+      "amount": 1000,
+      "request": "unfreeze_card"
+    },
+    "expected_action": {
+      "action": "denied",
+      "reason": "identity verification required"
+    }
+  },
+  {
+    "id": 10,
+    "name": "PII message shared",
+    "customerId": "cust_010",
+    "transaction": {
+      "id": "txn_010",
+      "message": "My PAN is ABCDE1234F"
+    },
+    "expected_action": {
+      "action": "redacted",
+      "reason": "PII redaction enforced"
+    }
+  },
+  {
+    "id": 11,
+    "name": "KB FAQ travel notice",
+    "customerId": "cust_011",
+    "transaction": {
+      "id": "txn_011",
+      "message": "How do I set a travel notice?"
+    },
+    "expected_action": {
+      "action": "kb_action_card",
+      "reason": "provide cited steps"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Ambiguous merchant name",
+    "customerId": "cust_012",
+    "transaction": {
+      "id": "txn_012",
+      "merchant": "Starbucks"
+    },
+    "expected_action": {
+      "action": "disambiguate_merchant",
+      "reason": "present top 2 candidates before action"
+    }
+  }
+]

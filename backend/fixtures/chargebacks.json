@@ -1,0 +1,22 @@
+[
+  {
+    "id": "cb_001",
+    "transactionId": "txn_00987",
+    "customerId": "cust_001",
+    "amount": 5000,
+    "currency": "INR",
+    "reason": "unauthorized_transaction",
+    "status": "won",
+    "ts": "2025-05-15T14:30:00Z"
+  },
+  {
+    "id": "cb_002",
+    "transactionId": "txn_00988",
+    "customerId": "cust_001", 
+    "amount": 7500,
+    "currency": "INR",
+    "reason": "product_not_received",
+    "status": "lost",
+    "ts": "2025-05-20T09:15:00Z"
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "id": "eval_txn_legit_001",
+    "input": {
+      "customerId": "cust_010",
+      "cardId": "card_222",
+      "mcc": "5411",
+      "merchant": "SuperMart",
+      "amount": 2500,
+      "currency": "INR",
+      "ts": "2025-06-10T16:20:00Z",
+      "deviceId": "dev_15",
+      "geo": { "lat": 28.61, "lon": 77.21, "country": "IN" }
+    },
+    "expected": {
+      "flagged": false
+    }
+  }
+]

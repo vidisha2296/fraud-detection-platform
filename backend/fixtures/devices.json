@@ -1,0 +1,23 @@
+[
+  {
+    "id": "dev_12",
+    "customerId": "cust_001",
+    "deviceType": "mobile",
+    "os": "Android",
+    "lastSeen": "2025-06-14T10:15:22Z"
+  },
+  {
+    "id": "dev_23",
+    "customerId": "cust_002",
+    "deviceType": "mobile", 
+    "os": "iOS",
+    "lastSeen": "2025-06-14T19:30:45Z"
+  },
+  {
+    "id": "dev_45",
+    "customerId": "cust_017",
+    "deviceType": "desktop",
+    "os": "Windows",
+    "lastSeen": "2025-06-13T13:02:11Z"
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "cust_001",
+    "name": "Rajesh Kumar",
+    "email_masked": "ra*****@gmail.com",
+    "risk_flags": ["high_chargeback_rate", "multiple_devices"]
+  },
+  {
+    "id": "cust_002", 
+    "name": "Priya Sharma",
+    "email_masked": "pr*****@yahoo.com",
+    "risk_flags": ["new_account"]
+  },
+  {
+    "id": "cust_017",
+    "name": "Vikram Singh",
+    "email_masked": "vi*****@hotmail.com",
+    "risk_flags": []
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Fraud Detection Guidelines",
+    "anchor": "fraud_policy_2025",
+    "chunks": [
+      "ATM withdrawals above ₹5000 require OTP verification",
+      "International transactions flagged for new customers",
+      "Multiple rapid transactions trigger risk alerts"
+    ]
+  },
+  {
+    "title": "Chargeback Process",
+    "anchor": "chargeback_procedure",
+    "chunks": [
+      "Customers have 60 days to dispute transactions",
+      "Merchants must provide evidence within 7 days",
+      "Common reasons: unauthorized, not received, defective"
+    ]
+  }
+]
